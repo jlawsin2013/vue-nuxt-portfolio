@@ -21,18 +21,6 @@
       <v-row>
         <v-col cols="12">
           <v-btn
-            :href="download.href"
-            size="small"
-            variant="plain"
-            :download="download.fileName"
-            prepend-icon="mdi-download-circle-outline"
-            >Download Image</v-btn
-          >
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="12">
-          <v-btn
             variant="plain"
             size="small"
             @click="takePhoto"
@@ -55,7 +43,7 @@
           </v-sheet>
         </v-col>
       </v-row>
-      <v-row>
+      <v-row v-if="img">
         <v-col cols="12">
           <v-btn
             variant="plain"
@@ -63,6 +51,18 @@
             prepend-icon="mdi-file-image-remove"
             @click="deleteImg"
             >Delete Image</v-btn
+          >
+        </v-col>
+      </v-row>
+      <v-row v-if="img">
+        <v-col cols="12">
+          <v-btn
+            :href="download.href"
+            size="small"
+            variant="plain"
+            :download="download.fileName"
+            prepend-icon="mdi-download-circle-outline"
+            >Download Image</v-btn
           >
         </v-col>
       </v-row>

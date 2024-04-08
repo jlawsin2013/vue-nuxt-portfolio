@@ -201,7 +201,7 @@ const { pending, data, refresh, error } = useFetch<Products[]>(
   {
     lazy: true,
     server: false,
-  }
+  },
 );
 
 watch(
@@ -212,7 +212,7 @@ watch(
       store.setProducts(newProducts);
     }
   },
-  { deep: true }
+  { deep: true },
 );
 
 watch(
@@ -223,7 +223,7 @@ watch(
       store.setPagination(newFilteredProducts);
     }
   },
-  { deep: true }
+  { deep: true },
 );
 
 const displayedProducts = computed((): Products[] => {

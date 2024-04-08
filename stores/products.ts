@@ -31,7 +31,7 @@ export const useProductsStore = defineStore("products", {
       this.pagination.data = [...products];
 
       this.pagination.pageCount = Math.ceil(
-        products.length / this.pagination.perPage
+        products.length / this.pagination.perPage,
       );
 
       if (this.pagination.pageCount == 1) {
