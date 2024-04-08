@@ -1,0 +1,32 @@
+.bg-color-light {
+  background-color: #1a1a1af5;
+}
+
+.bg-color-dark {
+  background-color: #1a1a1a;
+}
+
+.bg-color-gradient {
+  background-image: linear-gradient(270deg, #c215cfc2, #36e4da);
+}
+
+.bg-color-grey {
+  background-color: #7a736e;
+}
+
+.scroll {
+  bottom: 0;
+  position: fixed;
+  right: 0;
+}
+
+.text-copyright {
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.bg-img-avatar {
+  background: url("/images/java.svg") no-repeat center;
+  background-size: contain;
+}
