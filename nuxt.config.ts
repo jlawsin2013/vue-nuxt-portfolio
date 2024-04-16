@@ -14,6 +14,8 @@ export default defineNuxtConfig({
       ],
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
+    baseURL: "/vue-nuxt-portfolio/", // baseURL: '/<repository>/'
+    buildAssetsDir: "assets",
   },
   css: [
     "vuetify/lib/styles/main.sass",

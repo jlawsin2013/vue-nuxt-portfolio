@@ -72,6 +72,7 @@
 
 <script lang="ts" setup>
 import { useCamera } from "~/composables/camera/useCamera";
+import imageJson from "../static/image.json";
 
 definePageMeta({
   layout: "plain",
@@ -81,6 +82,7 @@ const { video, canvas, img, takePhoto, deleteImg, download, openCamera } =
   useCamera();
 
 onMounted(() => {
+  console.log(imageJson["electric-pole-no"].src);
   openCamera();
 });
 </script>

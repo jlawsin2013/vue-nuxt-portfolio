@@ -20,7 +20,7 @@ export const useCamera = () => {
       0,
       0,
       canvas.value.width,
-      canvas.value.height,
+      canvas.value.height
     );
 
     // Draw camera guides
@@ -38,7 +38,7 @@ export const useCamera = () => {
       50,
       20,
       canvas.value.width - 50 * 2,
-      canvas.value.height - 20 * 2,
+      canvas.value.height - 20 * 2
     );
     draw.strokeStyle = "green";
     draw.lineWidth = 5;
@@ -88,6 +88,14 @@ export const useCamera = () => {
   const takePhoto = (): void => {
     if (!video.value || !canvas.value || !draw.value) return;
 
+    draw.value.drawImage(
+      video.value,
+      0,
+      0,
+      canvas.value.width,
+      canvas.value.height
+    );
+
     canvas.value.toBlob((blob) => {
       if (!blob) {
         console.error("Error creating blob");
@@ -121,7 +129,7 @@ export const useCamera = () => {
   const openCamera = () => {
     if (!navigator.mediaDevices) {
       console.log(
-        "Media Capture and Stream API is not supported on this browser",
+        "Media Capture and Stream API is not supported on this browser"
       );
       return;
     }
